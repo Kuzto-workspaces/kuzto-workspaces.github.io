@@ -412,7 +412,7 @@ ul { list-style: none; }
 .footer-links { display: flex; gap: 20px; }
 .footer-links a { font-size: 0.8rem; color: var(--text-light); transition: color 0.2s; }
 .footer-links a:hover { color: var(--text-main); }
-.footer-copy { font-size: 0.75rem; color: var(--text-light); }
+.footer-copy { font-size: 0.75rem; color: var(--text-light); margin-right: 48px; }
 
 /* ============================================
    ANIMATIONS
@@ -472,8 +472,6 @@ ul { list-style: none; }
     .values-row { grid-template-columns: 1fr; }
     .eco-row { grid-template-columns: 1fr; }
     .folio-grid { grid-template-columns: repeat(2, 1fr); }
-    
-    .scroll-circle-wrap { display: none; }
 }
 
 @media (max-width: 640px) {
@@ -483,4 +481,5 @@ ul { list-style: none; }
     .hero-cta .btn { width: 100%; justify-content: center; }
     .email-link { font-size: 1.4rem; }
     .footer-bar { flex-direction: column; gap: 20px; padding-bottom: 32px; }
+    .footer-copy { margin-right: 0; }
 }
