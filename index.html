@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kuzto</title>
+    <link rel="icon" type="image/svg+xml" href="favicon.svg">
+    <meta name="description" content="Kuzto builds high-performance custom PCs and bespoke workspace setups for gamers, creators, and traders. Your first consultation is free.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=Sora:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <!-- Custom Cursor / Circular Scroll Indicator -->
+    <div class="scroll-circle-wrap" id="scrollCircle">
+        <div class="scroll-circle-track"></div>
+        <div class="scroll-circle-text" id="scrollText">0%</div>
+    </div>
+
+    <!-- Nav -->
+    <nav class="nav" id="nav">
+        <div class="wrap nav-bar">
+            <a href="#" class="logo logo-state-brand" id="animatedLogo"><span class="logo-k">K</span><span class="logo-r">uzto</span></a>
+            <div class="nav-right">
+                <ul class="nav-links" id="navLinks">
+                    <li><a href="#story">Story</a></li>
+                    <li><a href="#services">Services</a></li>
+                    <li><a href="#copilot">Why Us?</a></li>
+                </ul>
+                <a href="#contact" class="nav-cta">Free Consultation</a>
+                <button class="nav-toggle" id="navToggle" aria-label="Menu">
+                    <span></span><span></span><span></span>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero -->
+    <section class="hero" id="hero">
+        <div class="hero-bg-elements">
+            <div class="bg-shape shape-1"></div>
+            <div class="bg-shape shape-2"></div>
+        </div>
+
+        <div class="wrap hero-wrap">
+            <div class="hero-split">
+                <div class="hero-content">
+                    <h1>Beyond Computing.<br>We Build Environments.</h1>
+                    <p class="hero-desc">High-performance custom PCs and bespoke workspace setups designed for gamers, content creators, and traders. We bridge the gap between premium tech and custom woodwork to create the exact environment where you do your best work.</p>
+                    <div class="hero-cta">
+                        <a href="#contact" class="btn btn-primary">Book Your Free Consultation</a>
+                        <a href="#services" class="btn btn-outline">View Services</a>
+                    </div>
+                    <div class="hero-facts-inline">
+                        <span class="inline-fact">
+                            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6L9 17l-5-5"/></svg>
+                            1st Consultation Free (No Commitment)
+                        </span>
+                        <span class="inline-fact">
+                            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+                            Universal Warranty & Invoice Management
+                        </span>
+                    </div>
+                </div>
+                
+                <div class="hero-visual" id="heroSlideshow">
+                    <img src="photos/1.jpeg" alt="Kuzto Setup" class="hero-img hero-slide active">
+                    <img src="photos/2.jpeg" alt="Kuzto Setup" class="hero-img hero-slide">
+                    <img src="photos/3.jpeg" alt="Kuzto Setup" class="hero-img hero-slide">
+                    <img src="photos/4.jpeg" alt="Kuzto Setup" class="hero-img hero-slide">
+                    <div class="hero-overlay">
+                        <div class="overlay-content">
+                            <div class="consult-icon">
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M21 15a2 2 0 01-2 2H7l-4 4V5a2 2 0 012-2h14a2 2 0 012 2z"/></svg>
+                            </div>
+                            <h3>First Consultation is Free</h3>
+                            <p>No commitment, no pressure. Tell us what you need and we'll map out the best path forward together.</p>
+                            <a href="#contact" class="consult-link">Get started &rarr;</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Story -->
+    <section class="sec" id="story">
+        <div class="wrap">
+            <div class="sec-label">Our Story</div>
+            <div class="story-cols">
+                <div class="story-left">
+                    <h2>Born from passion. Built with precision.</h2>
+                </div>
+                <div class="story-right">
+                    <p>Kuzto didn't start as a business. It started at a desk, late at night, putting together a gaming rig for a friend. Then a trading terminal for another. Then a creator's editing bay. Word spread.</p>
+                    <p>Every project was a close collaboration. We'd figure out exactly what someone needed, find the right parts, build the custom woodwork, and obsess over every cable until it disappeared. No marketing. No overhead. Just the work.</p>
+                    <p>Now we're making it real. Same care, same transparency, same obsession with getting the environment right.</p>
+                </div>
+            </div>
+            <div class="values-row">
+                <div class="val">
+                    <span class="val-n">01</span>
+                    <h4>Hands-on</h4>
+                    <p>Every PC built, every piece of wood crafted by hand, with the same care as if it were our own.</p>
+                </div>
+                <div class="val">
+                    <span class="val-n">02</span>
+                    <h4>Direct</h4>
+                    <p>You work with us directly. No middlemen, no layers.</p>
+                </div>
+                <div class="val">
+                    <span class="val-n">03</span>
+                    <h4>No shortcuts</h4>
+                    <p>If it's not right, we redo it. Clean cables, stable thermals, solid joinery.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services -->
+    <section class="sec sec-alt" id="services">
+        <div class="wrap">
+            <div class="sec-label">Services</div>
+            <div class="sec-head">
+                <h2>Pick your level</h2>
+                <p>From a clean PC build to a comprehensive workspace interior makeover.</p>
+            </div>
+            <div class="svc-grid">
+                <div class="svc">
+                    <span class="svc-tier">Tier 1</span>
+                    <h3>The Foundation Build</h3>
+                    <p>Custom PC assembly, workstation tuning, OS installation, clean internal cable routing. A flawlessly built machine for your existing space.</p>
+                </div>
+                <div class="svc svc-pop">
+                    <span class="svc-badge">Popular</span>
+                    <span class="svc-tier">Tier 2</span>
+                    <h3>The Setup Makeover</h3>
+                    <p>Desk assembly, monitor mounting, peripheral sync, under-desk cable routing. Every electrical wire disappears.</p>
+                </div>
+                <div class="svc">
+                    <span class="svc-tier">Tier 3</span>
+                    <h3>The Turnkey Studio</h3>
+                    <p>Complete workspace interior design. Custom wooden desks with hidden tech channels, acoustic paneling, and tailored lighting.</p>
+                </div>
+                <div class="svc">
+                    <span class="svc-tier">Alternative</span>
+                    <h3>The Hybrid Value</h3>
+                    <p>Tested, high-quality second-hand components paired with reliable new hardware. Maximum performance, fraction of the cost.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Co-Pilot -->
+    <section class="sec" id="copilot">
+        <div class="wrap">
+            <div class="sec-label">The Co-Pilot Experience</div>
+            <div class="cp-grid">
+                <div class="cp-left">
+                    <h2>You drive. We navigate.</h2>
+                    <p>Total transparency and zero markups. We design the parts list together, you buy from retailers you trust, we handle the build and the woodwork.</p>
+                </div>
+                <div class="cp-right">
+                    <div class="cp-step">
+                        <span class="cp-n">1</span>
+                        <div>
+                            <h4>Collaborative design</h4>
+                            <p>We map out your ideal parts list and desk layout together, matching everything to your actual workflow.</p>
+                        </div>
+                    </div>
+                    <div class="cp-step">
+                        <span class="cp-n">2</span>
+                        <div>
+                            <h4>You purchase, you own</h4>
+                            <p>Buy hardware from trusted retailers of your choice. You unbox your own gear. No middleman pricing.</p>
+                        </div>
+                    </div>
+                    <div class="cp-step">
+                        <span class="cp-n">3</span>
+                        <div>
+                            <h4>We build and integrate</h4>
+                            <p>PC assembly, custom carpentry, cable management, final polish. An environment that looks and performs perfectly.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Ecosystem -->
+    <section class="sec sec-alt" id="ecosystem">
+        <div class="wrap">
+            <div class="sec-label">Peace of Mind</div>
+            <div class="sec-head">
+                <h2>The Kuzto Ecosystem</h2>
+                <p>Technology should be effortless. Once you're in, hardware and workspace maintenance are our problem.</p>
+            </div>
+            <div class="eco-row">
+                <div class="eco">
+                    <h4>Concierge Maintenance</h4>
+                    <p>We handle manufacturer warranties and RMAs on your behalf. No more waiting on hold.</p>
+                </div>
+                <div class="eco">
+                    <h4>Annual Refresh</h4>
+                    <p>Remote troubleshooting, PC deep-clean, and wood surface conditioning. Runs and looks like day one.</p>
+                </div>
+                <div class="eco">
+                    <h4>Trade-In and Upgrades</h4>
+                    <p>We evaluate your old parts, manage resale, and apply that value as credit toward new components.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Portfolio -->
+    <section class="sec" id="work">
+        <div class="wrap">
+            <div class="sec-label">Our Work</div>
+            <div class="sec-head">
+                <h2>Environments that speak for themselves</h2>
+                <p>Real builds, real setups. Photos from our projects coming soon.</p>
+            </div>
+            <div class="folio-grid">
+                <div class="folio">
+                    <img src="photos/4.jpeg" alt="Gaming Workstation" class="folio-img">
+                    <h4>Gaming Workstation</h4>
+                    <p>Custom water-cooled build, clean cable routing</p>
+                </div>
+                <div class="folio">
+                    <img src="photos/3.jpeg" alt="Creator Studio" class="folio-img">
+                    <h4>Creator Studio</h4>
+                    <p>Custom walnut desk makeover, zero visible cables</p>
+                </div>
+                <div class="folio">
+                    <img src="photos/1.jpeg" alt="High-Performance Rig" class="folio-img">
+                    <h4>High-Performance Rig</h4>
+                    <p>Premium AIO-cooled build, RGB tuned, flawless airflow</p>
+                </div>
+                <div class="folio">
+                    <img src="photos/2.jpeg" alt="Budget Power Build" class="folio-img">
+                    <h4>Budget Power Build</h4>
+                    <p>Hybrid value build, top-tier performance</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact -->
+    <section class="sec sec-dark" id="contact">
+        <div class="wrap">
+            <div class="contact-block">
+                <div class="contact-main">
+                    <div class="sec-label sec-label-inv">Get in Touch</div>
+                    <h2>Your first consultation is free.</h2>
+                    <p class="contact-sub">No commitment. No pressure. Reach out and tell us what you're looking for. We'll send you a short form to understand your needs, then set up a call to map out the best path forward.</p>
+                    <div class="contact-email">
+                        <a href="#" class="email-link" id="copyEmailBtn" data-email="Deba90020@gmail.com">Email Us →</a>
+                        <p class="email-note">Click to copy email · We usually respond within 24 hours.</p>
+                    </div>
+                </div>
+                <div class="contact-how">
+                    <div class="how-step">
+                        <span class="how-n">1</span>
+                        <div>
+                            <h4>Reach out</h4>
+                            <p>Drop us an email to start the conversation.</p>
+                        </div>
+                    </div>
+                    <div class="how-step">
+                        <span class="how-n">2</span>
+                        <div>
+                            <h4>Quick form</h4>
+                            <p>We'll share a short Google Form so we can understand what you need before we talk.</p>
+                        </div>
+                    </div>
+                    <div class="how-step">
+                        <span class="how-n">3</span>
+                        <div>
+                            <h4>Free consultation</h4>
+                            <p>We get on a call and work through your build together. No cost, no strings.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="wrap footer-bar">
+            <div class="footer-left">
+                <span class="logo-k">K</span><span class="logo-r">uzto</span>
+            </div>
+            <div class="footer-links">
+                <a href="#story">Story</a>
+                <a href="#services">Services</a>
+                <a href="#copilot">Why Us?</a>
+                <a href="#contact">Contact</a>
+            </div>
+            <p class="footer-copy">&copy; MMXXVI Kuzto</p>
+        </div>
+    </footer>
+
+    <!-- Toast Notification -->
+    <div id="toast" class="toast">Email ID copied to clipboard!</div>
+
+    <script src="app.js"></script>
+</body>
+</html>
