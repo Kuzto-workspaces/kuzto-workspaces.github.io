@@ -388,15 +388,16 @@ ul { list-style: none; }
    CONTACT (Dark)
    ============================================ */
 .sec-dark { background: var(--accent-primary); color: var(--white); border-bottom: none; }
-.contact-block { display: grid; grid-template-columns: 1.2fr 0.8fr; gap: 40px; align-items: start; }
+.contact-block { display: grid; grid-template-columns: 1.2fr 0.8fr; column-gap: 40px; align-items: start; }
+.contact-main { grid-column: 1; grid-row: 1; }
 .contact-main h2 { font-family: var(--serif); font-size: clamp(1.6rem, 2.8vw, 2.2rem); font-weight: 400; line-height: 1.2; margin-bottom: 12px; color: var(--white); }
 .contact-sub { font-size: 0.95rem; color: rgba(255,255,255,0.75); line-height: 1.7; text-align: justify; }
-.contact-how { display: flex; flex-direction: column; gap: 16px; padding-top: 24px; }
+.contact-how { grid-column: 2; grid-row: 1 / span 2; display: flex; flex-direction: column; gap: 16px; padding-top: 24px; }
 .how-step { display: flex; gap: 14px; align-items: flex-start; }
 .how-n { width: 28px; height: 28px; display: flex; align-items: center; justify-content: center; border-radius: 50%; border: 1.5px solid rgba(255,255,255,0.2); font-family: var(--serif); font-size: 0.8rem; flex-shrink: 0; color: var(--accent-wood-light); }
 .how-step h4 { font-size: 0.85rem; font-weight: 600; margin-bottom: 2px; }
 .how-step p { font-size: 0.8rem; color: rgba(255,255,255,0.65); line-height: 1.5; text-align: justify; }
-.contact-email { margin-top: 28px; }
+.contact-email { grid-column: 1; grid-row: 2; margin-top: 28px; }
 .email-link { font-family: var(--serif); font-size: 1.4rem; color: var(--white); display: inline-block; margin-bottom: 4px; transition: all 0.2s; cursor: pointer; }
 .email-link:hover { opacity: 0.8; color: var(--accent-wood-light); }
 .email-note { font-size: 0.8rem; color: rgba(255,255,255,0.5); margin-top: 4px; }
@@ -463,6 +464,7 @@ ul { list-style: none; }
     
     .hero-facts-inline { flex-direction: column; gap: 12px; }
     .hero-split, .story-cols, .cp-grid, .contact-block { grid-template-columns: 1fr; gap: 32px; }
+    .contact-main, .contact-how, .contact-email { grid-column: auto; grid-row: auto; }
     .hero-visual { display: none; }
     .cp-left { margin-top: 0; }
     
@@ -480,5 +482,5 @@ ul { list-style: none; }
     .hero-cta { flex-direction: column; }
     .hero-cta .btn { width: 100%; justify-content: center; }
     .email-link { font-size: 1.4rem; }
-    .footer-bar { flex-direction: column; gap: 20px; }
+    .footer-bar { flex-direction: column; gap: 20px; padding-bottom: 32px; }
 }
