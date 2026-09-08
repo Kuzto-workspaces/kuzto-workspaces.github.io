@@ -392,15 +392,41 @@ ul { list-style: none; }
 .contact-main { grid-column: 1; grid-row: 1; }
 .contact-main h2 { font-family: var(--serif); font-size: clamp(1.6rem, 2.8vw, 2.2rem); font-weight: 400; line-height: 1.2; margin-bottom: 12px; color: var(--white); }
 .contact-sub { font-size: 0.95rem; color: rgba(255,255,255,0.75); line-height: 1.7; text-align: justify; }
-.contact-how { grid-column: 2; grid-row: 1 / span 2; display: flex; flex-direction: column; gap: 16px; padding-top: 24px; }
+.contact-how { display: flex; flex-direction: column; gap: 16px; margin-top: 32px; padding-top: 24px; border-top: 1px solid rgba(255,255,255,0.1); }
 .how-step { display: flex; gap: 14px; align-items: flex-start; }
 .how-n { width: 28px; height: 28px; display: flex; align-items: center; justify-content: center; border-radius: 50%; border: 1.5px solid rgba(255,255,255,0.2); font-family: var(--serif); font-size: 0.8rem; flex-shrink: 0; color: var(--accent-wood-light); }
 .how-step h4 { font-size: 0.85rem; font-weight: 600; margin-bottom: 2px; }
 .how-step p { font-size: 0.8rem; color: rgba(255,255,255,0.65); line-height: 1.5; text-align: justify; }
-.contact-email { grid-column: 1; grid-row: 2; margin-top: 28px; }
-.email-link { font-family: var(--serif); font-size: 1.4rem; color: var(--white); display: inline-block; margin-bottom: 4px; transition: all 0.2s; cursor: pointer; }
-.email-link:hover { opacity: 0.8; color: var(--accent-wood-light); }
-.email-note { font-size: 0.8rem; color: rgba(255,255,255,0.5); margin-top: 4px; }
+
+/* ---- Phone Input Group ---- */
+.phone-input-group { display: flex; gap: 8px; width: 100%; }
+.phone-input-group #country-code { flex: 0 0 72px; padding: 12px 6px; text-align: center; font-weight: 500; font-size: 0.9rem; }
+.phone-input-group #contact-number { flex: 1 1 auto; min-width: 0; }
+
+/* ---- Contact Form ---- */
+.kuzto-form { grid-column: 2; grid-row: 1; display: flex; flex-direction: column; gap: 14px; padding-top: 8px; }
+.form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; }
+.form-group { display: flex; flex-direction: column; gap: 6px; }
+.form-group label { font-size: 0.8rem; font-weight: 600; color: var(--accent-wood-light); letter-spacing: 0.5px; text-transform: uppercase; }
+.kuzto-form input, .kuzto-form select, .kuzto-form textarea { 
+    width: 100%; padding: 12px 14px; 
+    font-family: var(--sans); font-size: 0.9rem; 
+    background: rgba(255,255,255,0.05); 
+    border: 1px solid rgba(255,255,255,0.15); 
+    color: var(--white); border-radius: 8px; 
+    transition: all 0.3s ease; outline: none; 
+}
+.kuzto-form input::placeholder, .kuzto-form textarea::placeholder { color: rgba(255,255,255,0.3); }
+.kuzto-form select { appearance: none; background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='rgba(255,255,255,0.6)' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3e%3cpolyline points='6 9 12 15 18 9'%3e%3c/polyline%3e%3c/svg%3e"); background-repeat: no-repeat; background-position: right 14px center; background-size: 14px; padding-right: 36px; }
+.kuzto-form select option { color: var(--text-main); background: var(--bg-main); }
+.kuzto-form input:focus, .kuzto-form select:focus, .kuzto-form textarea:focus { border-color: var(--accent-wood); background: rgba(255,255,255,0.1); }
+.kuzto-form textarea { min-height: 80px; resize: vertical; }
+.btn-form-submit { margin-top: 4px; background: var(--accent-wood-light); color: #1a2a1a; font-size: 0.9rem; font-weight: 700; justify-content: center; width: 100%; border-radius: 8px; padding: 14px; letter-spacing: 0.5px; box-shadow: 0 2px 12px rgba(184, 138, 92, 0.3); }
+.btn-form-submit:hover { background: var(--accent-wood-light); transform: translateY(-2px); box-shadow: 0 8px 24px rgba(0,0,0,0.2); }
+.btn-form-submit:disabled { opacity: 0.7; cursor: not-allowed; transform: none; }
+.form-message { font-size: 0.9rem; padding: 16px; border-radius: 8px; text-align: center; }
+.form-message.success { background: rgba(184, 138, 92, 0.1); color: var(--accent-wood-light); border: 1px solid rgba(184, 138, 92, 0.3); }
+.form-message.error { background: rgba(255, 99, 71, 0.1); color: #ff8b7a; border: 1px solid rgba(255, 99, 71, 0.3); }
 
 /* ============================================
    FOOTER
@@ -464,9 +490,11 @@ ul { list-style: none; }
     
     .hero-facts-inline { flex-direction: column; gap: 12px; }
     .hero-split, .story-cols, .cp-grid, .contact-block { grid-template-columns: 1fr; gap: 32px; }
-    .contact-main, .contact-how, .contact-email { grid-column: auto; grid-row: auto; }
+    .contact-main, .kuzto-form { grid-column: auto; grid-row: auto; }
     .hero-visual { display: none; }
     .cp-left { margin-top: 0; }
+    
+    .form-row { grid-template-columns: 1fr; gap: 20px; }
     
     .svc-grid { grid-template-columns: 1fr; }
     .values-row { grid-template-columns: 1fr; }

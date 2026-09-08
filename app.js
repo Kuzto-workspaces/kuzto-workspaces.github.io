@@ -215,4 +215,64 @@ document.addEventListener('DOMContentLoaded', () => {
             });
         });
     }
+
+    // Custom Contact Form Handling
+    const contactForm = document.getElementById('kuzto-contact-form');
+    if (contactForm) {
+        contactForm.addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            const submitBtn = contactForm.querySelector('.btn-form-submit');
+            const messageDiv = document.getElementById('form-message');
+            
+            // UI Loading state
+            const originalBtnText = submitBtn.innerText;
+            submitBtn.innerText = 'Submitting...';
+            submitBtn.disabled = true;
+            messageDiv.style.display = 'none';
+            messageDiv.className = 'form-message';
+            
+            // Gather data
+            const formData = new FormData(contactForm);
+            const dataObject = Object.fromEntries(formData.entries());
+            
+            // Combine country code and phone number for the backend
+            if (dataObject['Country Code'] && dataObject['Contact Number']) {
+                // Add a single quote to prevent Google Sheets from treating the '+' as a formula
+                dataObject['Contact Number'] = "'" + dataObject['Country Code'] + ' ' + dataObject['Contact Number'];
+                delete dataObject['Country Code'];
+            }
+            
+            // Live Google Apps Script Web App URL
+            const WEB_APP_URL = 'https://script.google.com/macros/s/AKfycbxR8DwrKNZdeSL3CH12Kz9sXWQEENLKHYcP6bbtLASP6BplW3BC9kwRjRl4YyeaFb77/exec'; 
+            
+            fetch(WEB_APP_URL, {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'text/plain;charset=utf-8',
+                },
+                redirect: 'follow',
+                body: JSON.stringify(dataObject)
+            })
+            .then(response => {
+                if (response.ok) {
+                    messageDiv.innerText = 'Thank you! Your enquiry has been received. We will contact you shortly.';
+                    messageDiv.classList.add('success');
+                    contactForm.reset();
+                } else {
+                    throw new Error('Network response was not ok.');
+                }
+            })
+            .catch(error => {
+                console.error('Error submitting form:', error);
+                messageDiv.innerText = 'Oops! Something went wrong. Please try again later.';
+                messageDiv.classList.add('error');
+            })
+            .finally(() => {
+                messageDiv.style.display = 'block';
+                submitBtn.innerText = originalBtnText;
+                submitBtn.disabled = false;
+            });
+        });
+    }
 });
